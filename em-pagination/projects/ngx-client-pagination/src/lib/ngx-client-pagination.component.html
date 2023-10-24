@@ -1,0 +1,11 @@
+<div class="container">
+  <button (click)="onFirst()" class="btn btn-dark" [disabled]="currentPage === 1 || !filteredData.length">
+    <<
+  </button>
+  <button (click)="onBack()" class="btn btn-dark" [disabled]="currentPage === 1 || !filteredData.length">
+    <
+  </button>
+  <div class="badge badge-dark badge-size" *ngIf="filteredData && filteredData.length">Page {{currentPage}} of {{pageCount}} | Count {{filteredData.length}}</div>
+  <button (click)="onForward()" class="btn btn-dark" [disabled]="currentPage === pageCount || !filteredData.length">></button>
+  <button (click)="onLast()" class="btn btn-dark" [disabled]="currentPage === pageCount || !filteredData.length">>></button>
+</div>

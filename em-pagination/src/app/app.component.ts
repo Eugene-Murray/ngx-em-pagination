@@ -7,4 +7,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'em-pagination';
+
+  filteredData = [{
+    id: 1,
+    name: 'John',
+  }, 
+  { 
+    id: 2,
+    name: 'John',
+   },
+   { 
+    id: 2,
+    name: 'John',
+   },
+   { 
+    id: 2,
+    name: 'John',
+   },
+   { 
+    id: 2,
+    name: 'John',
+   }]
 }

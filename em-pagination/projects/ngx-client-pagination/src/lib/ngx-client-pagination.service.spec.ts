@@ -1,13 +1,14 @@
 import { TestBed } from '@angular/core/testing';
+import { NgxClientPaginationService } from './ngx-client-pagination.service';
 
-import { NgxClinetPaginationService } from './ngx-client-pagination.service';
+
 
 describe('NgxClinetPaginationService', () => {
-  let service: NgxClinetPaginationService;
+  let service: NgxClientPaginationService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(NgxClinetPaginationService);
+    service = TestBed.inject(NgxClientPaginationService);
   });
 
   it('should be created', () => {
