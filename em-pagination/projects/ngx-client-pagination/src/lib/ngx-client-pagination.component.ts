@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { NgxClientPaginationService } from './ngx-client-pagination.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { NgxClientPaginationService } from './ngx-client-pagination.service';
 })
 export class NgxClinetPaginationComponent implements OnInit, OnChanges {
   @Input() filteredData: any[] = [];
+  @Output() pagedData: EventEmitter<any[]> = new EventEmitter();
   public currentPage: number = 0;
   public pageCount: number = 0;
 
@@ -20,10 +21,17 @@ export class NgxClinetPaginationComponent implements OnInit, OnChanges {
     this.paginationService.currentPage$.subscribe((currentPage) => {
       this.currentPage = currentPage;
     });
+
+    this.paginationService.pagedData$.subscribe((pagedData) => {
+      this.pagedData.emit(pagedData);
+    });
+
+
   }
 
   ngOnChanges(changes: SimpleChanges) {
     this.paginationService.setFilteredData(this.filteredData);
+    this.pagedData.emit(this.filteredData);
   }
 
   onBack(): void {
