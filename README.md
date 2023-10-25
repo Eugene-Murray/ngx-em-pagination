@@ -1,4 +1,4 @@
-# ngx-em-pagination
+# ngx-client-pagination
 Angular Client Pagination Component Lib Example
 
 # Angular version;
