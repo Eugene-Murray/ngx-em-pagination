@@ -17,4 +17,6 @@ npm i ngx-client-pagination
 
 <https://stackblitz.com/edit/angular-client-pagination-example?file=src%2Fapp%2Fpagination%2Fcomponents%2Fdata-grid.component.html>
 
-# Clone this repo and run NPM install and NG Serve
+# Clone this repo and run NPM install and NG Serve;
+
+<https://github.com/Eugene-Murray/ngx-em-pagination>
