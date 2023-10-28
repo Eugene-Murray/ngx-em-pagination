@@ -20,3 +20,5 @@ npm i ngx-client-pagination
 # Clone this repo and run NPM install and NG Serve;
 
 <https://github.com/Eugene-Murray/ngx-em-pagination>
+
+![alt text](../../../client-pagination-grid-example.jpg "Client Pagination Grid Example")
