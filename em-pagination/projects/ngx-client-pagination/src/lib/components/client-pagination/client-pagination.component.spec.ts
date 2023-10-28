@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxClinetPaginationComponent } from './ngx-client-pagination.component';
+import { NgxClinetPaginationComponent } from './client-pagination.component';
 
 describe('NgxClinetPaginationComponent', () => {
   let component: NgxClinetPaginationComponent;

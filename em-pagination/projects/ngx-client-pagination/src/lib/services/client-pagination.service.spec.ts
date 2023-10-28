@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { NgxClientPaginationService } from './ngx-client-pagination.service';
+import { NgxClientPaginationService } from './client-pagination.service';
 
 
 

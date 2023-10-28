@@ -21,12 +21,4 @@ export class AppComponent implements OnInit {
         this.filteredData = this.allData;
       });
   }
-
-  onFilteredData($event: any): void {
-    this.filteredData = $event;
-  }
-
-  onPagedData(pagedData: any[]): void {
-    this.pagedData = pagedData;
-  }
 }

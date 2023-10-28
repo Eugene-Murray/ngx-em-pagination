@@ -2,5 +2,5 @@
  * Public API Surface of ngx-client-pagination
  */
 
-export * from './lib/ngx-client-pagination.component';
-export * from './lib/ngx-client-pagination.module';
+export * from './lib/container/client-pagination-grid.component';
+export * from './lib/client-pagination.module';

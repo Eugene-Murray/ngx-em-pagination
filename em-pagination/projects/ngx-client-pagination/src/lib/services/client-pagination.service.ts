@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class NgxClientPaginationService {
+export class ClientPaginationService {
   private filteredData: unknown[] = [];
   private pagedSubject = new BehaviorSubject<any[]>([]);
   private pageCountSubject = new BehaviorSubject<number>(0);

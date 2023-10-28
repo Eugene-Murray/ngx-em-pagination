@@ -1,18 +1,8 @@
-<app-filter [allData]="allData" (filteredData)="onFilteredData($event)"></app-filter>
-
-<ngx-client-pagination [filteredData]="filteredData" (pagedData)="onPagedData($event)"></ngx-client-pagination>
-
-<table border="1">
-  <tr>
-    <th>Title</th>
-    <th>SubTitle</th>
-    <th>Img</th>
-  </tr>
-  <tr *ngFor="let item of pagedData">
-    <td>{{item.title}}</td><td>{{item.subTitle}}</td><td><img src="{{item.urlOfContent}}" height="200"></td>
-  </tr>
-</table>
-
-<ngx-client-pagination [filteredData]="filteredData"></ngx-client-pagination>
-
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+<ngx-client-pagination-grid [data]="allData" [config]="{
+  showFilter: true,
+  showPaginationTop: true,
+  showPaginationBottom: true,
+  gridColumnNames: ['Title', 'SubTitle', 'Img Url'],
+  gridFields: ['title', 'subTitle', 'urlOfContent']
+}"></ngx-client-pagination-grid>
