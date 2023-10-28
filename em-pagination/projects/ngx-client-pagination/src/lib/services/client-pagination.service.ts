@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ClientPaginationService {
   private filteredData: unknown[] = [];
   private pagedSubject = new BehaviorSubject<any[]>([]);
   private pageCountSubject = new BehaviorSubject<number>(0);
   private currentPageSubject = new BehaviorSubject<number>(1);
-  private pageSize: number = 9;
+  private _pageSize: number = 10;
   private currentPage: number = 1;
   private pageCount: number = 0;
 
@@ -17,7 +17,14 @@ export class ClientPaginationService {
   public pageCount$ = this.pageCountSubject.asObservable();
   public currentPage$ = this.currentPageSubject.asObservable();
 
-  constructor() { }
+  get pageSize(): number {
+    return this._pageSize;
+  }
+  set pageSize(value: number) {
+    this._pageSize = value;
+  }
+
+  constructor() {}
 
   setFilteredData(filteredData: unknown[]): void {
     this.filteredData = filteredData;
@@ -27,7 +34,9 @@ export class ClientPaginationService {
   }
 
   getFirstPage(): void {
-    if (!this.filteredData || this.filteredData.length === 0) { return; }
+    if (!this.filteredData || this.filteredData.length === 0) {
+      return;
+    }
     this.currentPage = 1;
     const startIndex = 0;
     const endIndex = this.getEndIndex(startIndex);
@@ -37,7 +46,9 @@ export class ClientPaginationService {
   }
 
   getLastPage(): void {
-    if (!this.filteredData || this.filteredData.length === 0) { return; }
+    if (!this.filteredData || this.filteredData.length === 0) {
+      return;
+    }
     this.currentPage = this.pageCount;
     const startIndex = this.filteredData.length - this.pageSize;
     const endIndex = this.getEndIndex(startIndex);
@@ -47,7 +58,9 @@ export class ClientPaginationService {
   }
 
   forward(): void {
-    if (!this.filteredData || this.filteredData.length === 0) { return; }
+    if (!this.filteredData || this.filteredData.length === 0) {
+      return;
+    }
     this.currentPage = this.currentPage + 1;
     const startIndex = this.getStartIndex();
     const endIndex = this.getEndIndex(startIndex);
@@ -57,7 +70,9 @@ export class ClientPaginationService {
   }
 
   back(): void {
-    if (!this.filteredData || this.filteredData.length === 0) { return; }
+    if (!this.filteredData || this.filteredData.length === 0) {
+      return;
+    }
     this.currentPage = this.currentPage - 1;
     const startIndex = this.getStartIndex();
     const endIndex = this.getEndIndex(startIndex);

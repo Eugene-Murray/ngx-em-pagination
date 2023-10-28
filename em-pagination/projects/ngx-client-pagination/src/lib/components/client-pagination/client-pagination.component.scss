@@ -1,25 +1,26 @@
-.container {
+.pagination-container {
   display: flex;
   justify-content: center;
-  padding: 5px 10px 5px 5px;
-  margin-bottom: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  margin: 5px;
+//   //padding: 5px 10px 5px 5px;
+//   margin-bottom: 10px;
+//   border: 1px solid rgba(255, 255, 255, 0.2);
+//   border-radius: 1px;
+//   background: rgba(255, 255, 255, 0.1);
 
-  .badge-size {
-    width: 200px;
-    text-align: center;
-  }
+//   .badge-size {
+//     width: 200px;
+//     text-align: center;
+//   }
 
-  button {
-    height: 20px;
-    width: 10px;
+//   button {
+//     height: 20px;
+//     width: 10px;
 
-    .icon {
-      position: relative;
-      bottom: 5px;
-      right: 3px;
-    }
-  }
+//     .icon {
+//       position: relative;
+//       bottom: 5px;
+//       right: 3px;
+//     }
+//   }
 }

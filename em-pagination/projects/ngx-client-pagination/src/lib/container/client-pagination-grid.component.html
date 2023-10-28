@@ -1,18 +1,24 @@
-
-<ngx-client-pagination [filteredData]="filteredData"></ngx-client-pagination>
+<div class="grid-container">
+  <ngx-client-pagination [filteredData]="filteredData"></ngx-client-pagination>
 
 <ngx-client-pagination-filter *ngIf="data"
   [data]="data"
   (filteredData)="onFilteredData($event)"
   ></ngx-client-pagination-filter>
 
-<table border="1">
-  <tr>
-    <th *ngFor="let title of config.gridColumnNames">{{ title }}</th>
-  </tr>
-  <tr *ngFor="let item of paginationService.pagedData$ | async">
-    <td *ngFor="let field of config.gridFields">{{item[field]}}</td>
-  </tr>
+<table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let title of config.gridColumnNames">{{ title }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of paginationService.pagedData$ | async">
+      <td *ngFor="let field of config.gridFields">{{item[field]}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <ngx-client-pagination [filteredData]="filteredData"></ngx-client-pagination>
+</div>
+

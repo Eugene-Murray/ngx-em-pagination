@@ -13,6 +13,7 @@ export class ClientPaginationGridComponent implements OnInit, OnChanges {
     showFilter: true,
     showPaginationTop: true,
     showPaginationBottom: true,
+    pageSize: 10,
     gridColumnNames: [],
     gridFields: []
   };
@@ -22,6 +23,7 @@ export class ClientPaginationGridComponent implements OnInit, OnChanges {
   constructor(public paginationService: ClientPaginationService) {}
 
   ngOnInit(): void {
+    this.paginationService.pageSize = this.config.pageSize ?? 10;
     this.paginationService.getFirstPage();
   }
 
