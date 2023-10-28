@@ -21,4 +21,4 @@ import { FilterService } from './services/filter.service';
     FilterService
   ]
 })
-export class NgxClinetPaginationModule { }
+export class NgxClientPaginationModule { }
