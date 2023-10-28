@@ -14,7 +14,8 @@ import { FilterService } from './services/filter.service';
     ClientPaginationComponent
   ],
   exports: [
-    ClientPaginationGridComponent
+    ClientPaginationGridComponent,
+    ClientPaginationComponent
   ],
   providers: [
     ClientPaginationService,

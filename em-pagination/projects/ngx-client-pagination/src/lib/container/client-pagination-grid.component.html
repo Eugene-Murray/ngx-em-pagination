@@ -1,12 +1,12 @@
 <div class="grid-container">
-  <ngx-client-pagination [filteredData]="filteredData"></ngx-client-pagination>
+  <ngx-client-pagination [data]="filteredData" *ngIf="config.showPaginationTop"></ngx-client-pagination>
 
-<ngx-client-pagination-filter *ngIf="data"
+<ngx-client-pagination-filter *ngIf="config.showFilter && data"
   [data]="data"
   (filteredData)="onFilteredData($event)"
   ></ngx-client-pagination-filter>
 
-<table class="table">
+<table class="table" *ngIf="data">
   <thead>
     <tr>
       <th *ngFor="let title of config.gridColumnNames">{{ title }}</th>
@@ -19,6 +19,6 @@
   </tbody>
 </table>
 
-<ngx-client-pagination [filteredData]="filteredData"></ngx-client-pagination>
+<ngx-client-pagination [data]="filteredData" *ngIf="config.showPaginationBottom"></ngx-client-pagination>
 </div>
 

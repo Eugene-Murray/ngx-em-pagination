@@ -7,7 +7,7 @@ import { ClientPaginationService } from '../../services/client-pagination.servic
   styleUrls: ['./client-pagination.component.scss']
 })
 export class ClientPaginationComponent implements OnInit, OnChanges {
-  @Input() filteredData: unknown[] = [];
+  @Input() data: unknown[] | null = [];
   @Output() pagedData: EventEmitter<unknown[]> = new EventEmitter();
   public currentPage: number = 0;
   public pageCount: number = 0;
@@ -28,8 +28,10 @@ export class ClientPaginationComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    this.paginationService.setFilteredData(this.filteredData);
-    this.paginationService.getFirstPage();
+    if (this.data) {
+      this.paginationService.setFilteredData(this.data);
+      this.paginationService.getFirstPage();
+    }
   }
 
   onBack(): void {

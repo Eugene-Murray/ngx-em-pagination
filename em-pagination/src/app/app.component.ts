@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from './services/data.service';
-import { Observable } from 'rxjs';
-import { Content } from './models/interfaces';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +7,4 @@ import { Content } from './models/interfaces';
 })
 export class AppComponent {
   title = 'em-pagination';
-  data$: Observable<Content[]> = this.dataService.getContent() ?? [];
-
-  constructor(private dataService: DataService) { }
 }

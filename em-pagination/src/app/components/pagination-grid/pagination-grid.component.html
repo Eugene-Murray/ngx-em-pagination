@@ -1,0 +1,13 @@
+<div class="container">
+  <ngx-client-pagination-grid
+    [data]="data$ | async"
+    [config]="{
+      showFilter: true,
+      showPaginationTop: true,
+      showPaginationBottom: true,
+      pageSize: 20,
+      gridColumnNames: ['Title', 'SubTitle', 'Img Url'],
+      gridFields: ['title', 'subTitle', 'urlOfContent']
+    }"
+  ></ngx-client-pagination-grid>
+</div>
