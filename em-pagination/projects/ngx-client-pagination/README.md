@@ -21,4 +21,4 @@ npm i ngx-client-pagination
 
 <https://github.com/Eugene-Murray/ngx-em-pagination>
 
-![alt text](../../../client-pagination-grid-example.jpg "Client Pagination Grid Example")
+![alt text](client-pagination-grid-example.jpg "Client Pagination Grid Example")
