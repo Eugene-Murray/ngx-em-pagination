@@ -11,7 +11,7 @@ npm i ngx-client-pagination
 
 <https://www.npmjs.com/package/ngx-client-pagination>
 
-# Stackblitz Example;
+# Stackblitz Example (old Angular 9 version);
 
 <https://angular-client-pagination-example.stackblitz.io>
 
