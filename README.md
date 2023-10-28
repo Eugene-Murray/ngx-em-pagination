@@ -22,6 +22,7 @@ npm i ngx-client-pagination
 Import 'NgxClientPaginationModule' into your Angular Module.
 
 Add ngx-client-pagination-grid into your template;
+```
 <ngx-client-pagination-grid [data]="allData" [config]="{
   showFilter: true,
   showPaginationTop: true,
@@ -29,3 +30,4 @@ Add ngx-client-pagination-grid into your template;
   gridColumnNames: ['Title', 'SubTitle', 'Img Url'],
   gridFields: ['title', 'subTitle', 'urlOfContent']
 }"></ngx-client-pagination-grid>
+```
