@@ -31,3 +31,5 @@ Add ngx-client-pagination-grid into your template;
   gridFields: ['title', 'subTitle', 'urlOfContent']
 }"></ngx-client-pagination-grid>
 ```
+
+![alt text](client-pagination-grid-example.jpg "Client Pagination Grid Example")
