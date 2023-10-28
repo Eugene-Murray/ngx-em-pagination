@@ -1,24 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './services/data.service';
+import { Observable } from 'rxjs';
+import { Content } from './models/interfaces';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'em-pagination';
-  allData: any[] = [];
-  filteredData: any[] = [];
-  pagedData: any[] = [];
+  data$: Observable<Content[]> = this.dataService.getContent() ?? [];
 
   constructor(private dataService: DataService) { }
-
-  ngOnInit() {
-    this.dataService
-        .getContent().subscribe((content) => {
-        this.allData = content;
-        this.filteredData = this.allData;
-      });
-  }
 }

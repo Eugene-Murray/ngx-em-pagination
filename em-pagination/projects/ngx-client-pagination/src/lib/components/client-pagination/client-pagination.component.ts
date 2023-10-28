@@ -7,8 +7,8 @@ import { ClientPaginationService } from '../../services/client-pagination.servic
   styleUrls: ['./client-pagination.component.scss']
 })
 export class ClientPaginationComponent implements OnInit, OnChanges {
-  @Input() filteredData: any[] = [];
-  @Output() pagedData: EventEmitter<any[]> = new EventEmitter();
+  @Input() filteredData: unknown[] = [];
+  @Output() pagedData: EventEmitter<unknown[]> = new EventEmitter();
   public currentPage: number = 0;
   public pageCount: number = 0;
 

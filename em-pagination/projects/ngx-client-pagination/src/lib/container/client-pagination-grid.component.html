@@ -1,7 +1,7 @@
 
 <ngx-client-pagination [filteredData]="filteredData"></ngx-client-pagination>
 
-<ngx-client-pagination-filter
+<ngx-client-pagination-filter *ngIf="data"
   [data]="data"
   (filteredData)="onFilteredData($event)"
   ></ngx-client-pagination-filter>

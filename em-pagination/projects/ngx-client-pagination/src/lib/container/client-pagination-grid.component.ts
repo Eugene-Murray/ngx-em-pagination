@@ -8,7 +8,7 @@ import { ClientPaginationService } from '../services/client-pagination.service';
   styleUrls: ['./client-pagination-grid.component.scss']
 })
 export class ClientPaginationGridComponent implements OnInit, OnChanges {
-  @Input() data: any[] = [];
+  @Input() data: any[] | null = [];
   @Input() config: Config = {
     showFilter: true,
     showPaginationTop: true,
@@ -17,8 +17,7 @@ export class ClientPaginationGridComponent implements OnInit, OnChanges {
     gridFields: []
   };
 
-  dataKeys: string[] = [];
-  filteredData: any[] = [];
+  filteredData: unknown[] = [];
 
   constructor(public paginationService: ClientPaginationService) {}
 
@@ -27,8 +26,8 @@ export class ClientPaginationGridComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (this.filteredData.length === 0) {
-      this.filteredData = this.data;
+    if (this.filteredData?.length === 0) {
+      this.filteredData = this.data ?? [];
       this.paginationService.getFirstPage();
     }
   }

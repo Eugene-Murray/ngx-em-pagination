@@ -19,7 +19,7 @@ export class ClientPaginationService {
 
   constructor() { }
 
-  setFilteredData(filteredData: any[]): void {
+  setFilteredData(filteredData: unknown[]): void {
     this.filteredData = filteredData;
     this.pageCount = Math.ceil(this.filteredData.length / this.pageSize);
     this.pageCountSubject.next(this.pageCount);

@@ -9,8 +9,8 @@ import { FilterService } from '../../services/filter.service';
 })
 export class DataFilterComponent {
 
-  @Input() data: any[] = [];
-  @Output() filteredData = new EventEmitter<any[]>();
+  @Input() data: unknown[] = [];
+  @Output() filteredData = new EventEmitter<unknown[]>();
 
   constructor(private filterService: FilterService) { }
 
