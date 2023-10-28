@@ -1,3 +1,14 @@
 <div class="container">
-  <ngx-client-pagination [data]="data$ | async"></ngx-client-pagination>
+  <ngx-client-pagination [data]="data$ | async" (pagedData)="onPagedData($event)"></ngx-client-pagination>
+
+  <table class="table">
+    <tr>
+      <th>Title</th>
+      <th>SubTitle</th>
+      <th>Img</th>
+    </tr>
+    <tr *ngFor="let item of pagedData">
+      <td>{{item.title}}</td><td>{{item.subTitle}}</td><td><img alt="{{item.title}}" src="{{item.urlOfContent}}" height="200"></td>
+    </tr>
+  </table>
 </div>

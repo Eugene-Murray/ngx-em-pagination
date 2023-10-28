@@ -10,6 +10,11 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class PaginationOnlyComponent {
   data$: Observable<Content[]> = this.dataService.getContent() ?? [];
+  pagedData: Content[] = [];
 
   constructor(private dataService: DataService) { }
+
+  onPagedData(pagedData: any): void {
+    this.pagedData = pagedData;
+  }
 }
