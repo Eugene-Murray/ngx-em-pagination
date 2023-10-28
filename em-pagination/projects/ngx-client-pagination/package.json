@@ -1,7 +1,7 @@
 {
   "name": "ngx-client-pagination",
-  "keywords": [ "Angular", "client pagination", "pagination", "data table", "filter" ],
-  "version": "0.0.7",
+  "keywords": [ "Angular", "Client Pagination", "Pagination", "Data Table", "Data Filter" ],
+  "version": "0.0.8",
   "peerDependencies": {
     "@angular/common": "^16.0.0",
     "@angular/core": "^16.0.0"

@@ -1,9 +1,9 @@
-# ngx-em-pagination
+# ngx-client-pagination
 Angular Client Pagination Component Lib Example
 
 # Library version;
 
-0.0.6
+0.0.8
 
 # Angular version;
 
