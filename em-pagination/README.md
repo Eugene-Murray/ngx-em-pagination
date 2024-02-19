@@ -1,6 +1,6 @@
 # NGX Em Pagination Example
 
-Angular version 16.0.2.
+Angular version 17.2.1.
 
 ## Development server
 
