@@ -3,11 +3,11 @@ Angular Client Pagination Component Lib Example
 
 # Library version;
 
-0.0.9
+0.1.0
 
 # Angular version;
 
-16.0.2
+17.2.1
 
 # NPM Package;
 
